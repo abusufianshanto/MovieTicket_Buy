@@ -14,8 +14,7 @@ public class Person {
     public int getAge() {
         return age;
     }
-    public void displayInfo() {
-        System.out.println("Name: "+name);
-        System.out.println("Age: "+age);
+    public String displayInfo() {
+       return "Name: "+name+", Age: "+age;
     }
 }

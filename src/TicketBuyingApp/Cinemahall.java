@@ -1,23 +1,24 @@
 package TicketBuyingApp;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public abstract class Cinemahall {
     private ArrayList<Movie> movies;
     private ArrayList<Person> visitors;
-    private int totalSeats;
+    private int totalTickets;
 
     public Cinemahall() {
         movies = new ArrayList<>();
         visitors = new ArrayList<>();
-//        this.totalSeats = totalSeats;
     }
-    public void setTotalSeats(int totalSeats) {
-        this.totalSeats = totalSeats;
+    public void setTotalTickets(int totalTickets) {
+        this.totalTickets = totalTickets;
     }
-    public int getTotalSeats() {
-        return totalSeats;
+    public int getTotalTickets() {
+        return totalTickets;
+    }
+    public int soldTickets() {
+        return getTotalTickets() - getVisitors().size();
     }
 
     public void addMovies(Movie movie) {
