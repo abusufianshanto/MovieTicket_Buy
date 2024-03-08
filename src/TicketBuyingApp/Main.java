@@ -30,7 +30,7 @@ public class Main {
         }
 
         Ticket bashundharaTicket = new Ticket();
-        bashundharaTicket.setTotalTickets(100);
+        bashundharaTicket.setTotalTickets(2000);
         System.out.println("Total Tickets: "+bashundharaTicket.getTotalTickets());
         System.out.println("Sold Tickets: "+bashundharaTicket.soldTickets(bashundhara));
 
