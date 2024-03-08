@@ -11,20 +11,11 @@ public abstract class Cinemahall {
         movies = new ArrayList<>();
         visitors = new ArrayList<>();
     }
-    public void setTotalTickets(int totalTickets) {
-        this.totalTickets = totalTickets;
-    }
-    public int getTotalTickets() {
-        return totalTickets;
-    }
-    public int soldTickets() {
-        return getTotalTickets() - getVisitors().size();
-    }
 
     public void addMovies(Movie movie) {
         movies.add(movie);
     }
-    public void removieMovies(Movie movie) {
+    public void removeMovies(Movie movie) {
         movies.remove(movie);
     }
     public void addPerson(Person person) {

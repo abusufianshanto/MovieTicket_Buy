@@ -10,14 +10,25 @@ public class Movie {
         this.movieName = movieName;
         this.movieDirector = movieDirector;
     }
+
     public void setMovieName(String movieName) {
-        this.movieName = movieName;
+        if (movieName != null && !movieName.isEmpty()) {
+            this.movieName = movieName;
+        } else {
+            throw new IllegalArgumentException("Movie name cannot be null or empty.");
+        }
     }
+
     public String getMovieName() {
         return movieName;
     }
+
     public void setMovieDirector(String movieDirector) {
-        this.movieDirector = movieDirector;
+        if (movieDirector != null && !movieDirector.isEmpty()) {
+            this.movieDirector = movieDirector;
+        } else {
+            throw new IllegalArgumentException("Movie director cannot be null or empty.");
+        }
     }
     public String getMovieDirector() {
         return movieDirector;

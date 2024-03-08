@@ -15,20 +15,24 @@ public class Main {
         bashundhara.addMovies(movie2);
 
         Person visitor1 = new Person("Arby", 23);
+        Person visitor2 = new Person("Shanto", 23);
         //visitor adding methods working here
         bashundhara.addPerson(visitor1);
+        bashundhara.addPerson(visitor2);
 
         System.out.println("Right now we have two movies ongoing. Below is the list: ");
         for(Movie movie : bashundhara.getMovies()) {
             System.out.println(""+movie.displayMovieInfo());
         }
-        bashundhara.setTotalTickets(100);
-        System.out.println(bashundhara.getTotalTickets());
 
         for(Person person : bashundhara.getVisitors()) {
             System.out.println(""+person.displayInfo());
         }
 
+        Ticket bashundharaTicket = new Ticket();
+        bashundharaTicket.setTotalTickets(100);
+        System.out.println("Total Tickets: "+bashundharaTicket.getTotalTickets());
+        System.out.println("Sold Tickets: "+bashundharaTicket.soldTickets(bashundhara));
 
     }
 }

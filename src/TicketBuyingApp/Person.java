@@ -8,8 +8,24 @@ public class Person {
         this.name = name;
         this.age = age;
     }
+    public void setName(String name) {
+        if (name != null && !name.isEmpty()) {
+            this.name = name;
+        } else {
+            throw new IllegalArgumentException("Person name cannot be null or empty.");
+        }
+    }
+
     public String getName() {
         return name;
+    }
+
+    public void setAge(int age) {
+        if (age >= 0) {
+            this.age = age;
+        } else {
+            throw new IllegalArgumentException("Age cannot be negative.");
+        }
     }
     public int getAge() {
         return age;
